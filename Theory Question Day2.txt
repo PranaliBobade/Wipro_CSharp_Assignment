@@ -1,0 +1,13 @@
+Why do we use loops in programming languages?
+
+Loops are used in programming languages to execute a block of code repeatedly until a certain condition is met. They provide a way to automate repetitive tasks and iterate over a sequence of data or perform operations a fixed number of times. Without loops, we would have to write repetitive code manually, which would be inefficient, error-prone, and harder to maintain.
+
+Difference between while and do...while loops?
+
+While loop: In a while loop, the condition is evaluated before executing the loop body. If the condition is initially false, the loop body will not execute at all.
+Do...while loop: In a do...while loop, the condition is evaluated after executing the loop body. This means the loop body will always execute at least once, regardless of whether the condition is true or false after the first iteration.
+
+How to represent loops in algorithms?
+
+Loops in algorithms are typically represented using flowcharts or pseudocode. Here’s a basic example of how you might represent a while loop in pseudocode:
+In a flowchart, a loop would be represented with a diamond shape with the loop condition inside it, connected to the loop body with an arrow. The loop body itself would be represented in a sequence of steps or actions.

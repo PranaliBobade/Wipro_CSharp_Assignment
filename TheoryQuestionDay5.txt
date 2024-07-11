@@ -1,0 +1,61 @@
+
+Why do we use functions in programming languages?
+
+Functions are used in programming languages for several reasons:
+
+Modularity: Functions allow you to break down a program into smaller, manageable pieces of code.
+Reusability: Once defined, functions can be called multiple times from different parts of a program, reducing redundancy and promoting code reuse.
+Functions hide the implementation details from the caller, allowing them to focus on what the function does rather than how it does it.
+Functions help in organizing code logically, making it easier to understand, maintain, and debug.
+
+
+
+Difference between parameters and arguments?
+
+Parameters: These are variables declared in a function's definition. They represent the data that a function expects to receive when it is called. Parameters are placeholders for the actual values (arguments) that will be passed into the function.
+
+Arguments: These are the actual values or variables that are passed into a function when it is called. Arguments correspond to the parameters of the function. When a function is called, the arguments are evaluated and then assigned to the corresponding parameters.
+In essence, parameters are in the function definition, while arguments are the actual values passed to the function when it is called.
+
+What is function overloading?
+
+Function overloading is a feature in programming that allows a programmer to define multiple functions with the same name but with different parameter lists. The functions can differ in the number or type of parameters. The compiler or runtime environment determines which function to call based on the number and types of arguments passed to it.
+
+Function overloading provides flexibility and code readability by allowing multiple functions of the same name to perform different tasks based on the context in which they are called.
+
+How to implement function overloading in C#?
+
+In C#, function overloading is supported natively. We can implement function overloading by defining multiple methods with the same name but different parameters within the same class. 
+
+
+public class Summation
+{    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+}
+Add(int a, int b) and Add(double a, double b) are overloaded methods because they have the same name (Add) but different parameter types (int vs double).
+
+
+
+4.When do we use  ref and out keywords in functions in c#?The out is a keyword in C# which is used for the passing the arguments to methods as a reference type. It is generally used when a method returns multiple values. The out parameter does not pass the property.
+The ref is a keyword in C# which is used for the passing the arguments by a reference. Or we can say that if any changes made in this argument in the method will reflect in that variable when the control return to the calling method. The ref parameter does not pass the property.
+
+5.  Can we return multiple values from a function?
+yes, we can return multiple values from a function in c# by using ref and out variable.
+
+
+
+
+
+
+
+
+
+

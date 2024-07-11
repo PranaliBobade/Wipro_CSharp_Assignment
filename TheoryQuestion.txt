@@ -1,0 +1,48 @@
+1.What is the significance of scope of the variable?  What are the different scope options available in C#?
+
+The scope of a variable determines where in  code it can be accessed or used. 
+It helps in organizing and managing the lifecycle of variables, preventing unintended conflicts or errors.
+
+Local Scope or Block Scope: The variables declared within the local scope are called local variables. 
+Local variables are visible in the block they are declared in and other blocks nested inside that block.
+Class Scope: The variables declared inside the class but outside any method are called class variables.
+
+
+
+2.
+Difference between a Variable and Constant:
+
+Variable: A variable is a named storage location in memory whose value can change during program execution.
+Constant: A constant is a variable whose value cannot be changed once it has been assigned.
+In C#, constants are declared using the const keyword and must be initialized with a value at the time of declaration. 
+They are typically used for values that are known and fixed at compile-time.
+
+3.  What is the maximum value that we can store in integer variable in C#?
+In C#, the maximum value that can be stored in an integer variable (int) is 2,147,483,647. 
+This is because int is a 32-bit signed integer type, and its range is from -2,147,483,648 to 2,147,483,647. 
+If  need to store larger values, we would use a long type, which is a 64-bit signed integer with a range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+
+Boxing In C#
+The process of converting a Value Type variable (char, int etc.) to a Reference Type variable (object) is called Boxing.
+Boxing is an implicit conversion process in which object type (super type) is used.
+Value Type variables are always stored in Stack memory, while Reference Type variables are stored in Heap memory.
+Example :
+int num = 23; 
+Object Obj = num; // Boxing
+Description : First, we declare a Value Type variable num of the type int and initialise it with value 23.
+ Now, we create a Reference Type variable obj of the type Object and assign num to it.
+ This assignment implicitly results in the Value Type variable num to be copied and stored in Reference Type variable obj 
+
+Unboxing In C#
+
+The process of converting a Reference Type variable into a Value Type variable is known as Unboxing.
+It is an explicit conversion process.
+Example :
+int num = 23;         
+Object Obj = num;    // Boxing
+int i = (int)Obj;    // Unboxing
+Description : We declare a Value Type variable num, which is of the type int and assign it with integer value 23. Now, we create a Reference Type variable obj of the type Object, in which we box the variable num. Now, we create a Value Type integer i to unbox the value from obj. This is done using the casting method, in which we explicitly specify that obj must be cast as an int value.
+
+
+
+
