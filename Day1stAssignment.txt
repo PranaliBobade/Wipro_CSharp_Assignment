@@ -1,0 +1,154 @@
+1. Open the Flipkart website at (https://www.flipkart.com).
+2. Click on the site to enter the home page.
+3. Go to the "Categories" section and view the available filters. 
+If you choose "Fashion," filters like "Women Ethnic," "Western," "Kids," "Winter," etc., will be displayed.
+4. Select a filter, such as "Kids," to see a variety of clothing and accessories for kids.
+5. Click on any product to view its details, including pictures, sizes, add-to-cart options, Wishlist, available offers, and more.
+6. If you want to purchase the product, click on the "Buy Now" option.
+7. The order details page will appear, showing the "Place Order" button for further processing.
+8. You will be  log in or sign up to proceed.
+9. After logging in or signing up, you can enter the delivery address, view the order summary, and make the payment.
+10. Once the payment is successfully completed, your order will be placed.
+11. After placing the order, you will receive an order confirmation message.
+12. You can track your order status in the "My Orders" section of your account.
+13. You will receive a notification when your order is shipped, along with a tracking number.
+14. Once the order is out for delivery, you will get a notification with the estimated delivery time.
+15. If you have any issues, you can contact customer support for assistance.
+16. You can explore Flipkart Application using above same process.
+
+
+Write the Pseudocode to Calculate the sum of digits of the number given by user
+Eg: 456=4+5+6=15
+ 
+2. Write the Pseudocode to calcualte the area of a rectangle, square and circle
+ 
+3. Write the Pseudocode to calculate the average of 5 marks accepted from user. If the average is between 75-90 print excellent, 
+60-75 print good and 45-60 pass below 45 fail
+
+
+1.import java.io.*;
+ 
+class Addition {
+ 
+ static int getSumOfNumber(int n)
+    {
+        int sum = 0;
+ 
+        while (n != 0) {
+            sum = sum + n % 10;
+            n = n / 10;
+        }
+ 
+        return sum;
+    }
+ 
+   public static void main(String[] args)
+    {
+        int n = 456;
+ 
+      
+        System.out.println(getSumOfNumber(n));
+    }  
+   
+}
+
+
+2.
+class AreaOfRectangle
+{
+  public static void main(String args[])
+  {
+double length = 5; 
+double width = 2; 
+double radius = 5;
+ double areaOfRect=areaOfRectangle(length,width);
+System.out.println("Area of Rectangle: " + areaOfRect); 
+ double areaOfSquare=areaOfSauare(length);
+System.out.println("Area of Square: " + areaOfSquare); 
+ double areaOfCircle=areaOfCircle(radius);
+ System.out.println("Area of Circle:"+areaOfCircle);
+
+}
+  public static double areaOfSquare(double side)
+  {
+double area =(side * side) ; 
+System.out.println("Area of Square: " + area); 
+
+return area;
+}
+ public static double areaOfRectangle(double length, double width)
+  {
+double area =(length * width) ; 
+System.out.println("Area of Rectangle: " + area); 
+
+return area;
+}
+
+
+  public static double areaOfCircle(double radius)
+  {
+  
+    double  area = 3.14 * (radius * radius);
+    System.out.println("Area is :"+area);
+return area;
+
+      }
+}
+1.
+Sum is initialize by zero 
+using while loop 
+if n is not equals to 0 then it will go inside and then calculate sum value
+ sum = sum + n % 10;
+            n = n / 10;
+and return sum value and it will update Sum value and again check while until its not equal to zero.
+
+2.
+Main Function (main):
+
+Initializes dimensions (length, width, radius) and calculates areas using respective functions.
+
+Initialize length, width, and radius with specific values (5, 2, and 5 ) this is Assuming values "Enter the values).
+Calculate the area of the rectangle using areaOfRectangle(length, width) and store the result in areaOfRect.
+Print the calculated area of the rectangle.
+Calculate the area of the square using areaOfSquare(length) and store the result in areaOfSquare.
+Print the calculated area of the square.
+Calculate the area of the circle using areaOfCircle(radius) and store the result in areaOfCircle.
+Calculates the area of the circle.
+Area Functions:
+areaOfRectangle(length, width):
+ Calculates the area of a rectangle given its length and width.
+Formula: area = length * width
+areaOfSquare(side):
+ Calculates the area of a square given its side length.
+Formula: area = side * side
+areaOfCircle(radius):
+Purpose: Calculates the area of a circle given its radius.
+Formula: area = π * (radius * radius) (approximated here as 3.14 * (radius * radius) ).
+
+3.1. Start
+
+2. Initialize sum to 0.
+3. Initialize count to 5.
+4. Initialize average to 0.
+
+5. 
+6. for i = 1 to count do
+7.     Display "Enter mark ", i, ": "
+8.     Input mark
+9.     sum = sum + mark
+10. end for
+
+11. average = sum / count
+12. if average >= 75 and average <= 90 then
+13.     Display "Excellent"
+14. else if average >= 60 and average < 75 then
+15.     Display "Good"
+16. else if average >= 45 and average < 60 then
+17.     Display "Pass"
+18. else
+19.     Display "Fail"
+20. end if
+21. Stop
+
+
+
