@@ -1,41 +1,35 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
 using System;
+
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        int[] arr = { 1, 2, 3, 4, 5 };
-        Console.WriteLine("Original Array");
-        PrintArray(arr);
-        ReverseArray(arr);
-        Console.WriteLine("\n Reverse Array");
-        PrintArray(arr);
+        string[] ar = { "Books", "Pens", "Charts" };
 
+     
+        string result = ConvertToCsv(ar);
+
+  
+        Console.WriteLine($"Output: {result}");
+
+        Console.ReadLine();
     }
-    static void ReverseArray(int[] arr)
+
+    static string ConvertToCsv(string[] array)
     {
-        int start = 0;
-        int end = arr.Length - 1;
-        while (start < end)
+        if (array == null || array.Length == 0)
         {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
-
-        }
-    }
-        static void PrintArray(int[] arr)
-        {
-            foreach (var item in arr)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
+            return ""; 
         }
 
-    
- }
+        string csvString = array[0]; 
+
+       
+        for (int i = 1; i < array.Length; i++)
+        {
+            csvString += ", " + array[i];
+        }
+
+        return csvString;
+    }
+}
