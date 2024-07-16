@@ -1,21 +1,45 @@
-﻿using System;
+using System;
 
-public class SecondSeries
+class Program
 {
-	static void Main(string[]args)
+    static void Main()
+    {
+        Console.WriteLine("Enter a sentence:");
+        string input = Console.ReadLine();
 
-	{
-		Console.WriteLine("This is the Series");
-		int a = 0;
-		int b = 1;
-		Console.Write(a + " " + b + " ");
-		for(int i = 2; i < 13; i++)
-		{
-			int c = a + b;
-			Console.Write(c + " ");
-			a = b;
-			b = c;
-		}
+        int count = CountWordsWithEqualLength(input);
 
-	}
+        Console.WriteLine($"Number of words with equal lengths: {count}");
+    }
+
+    static int CountWordsWithEqualLength(string input)
+    {
+        string[] words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        int equalLengthCount = 0;
+
+        foreach (string word in words)
+        {
+            int length = word.Length;
+
+            if (CountWordsOfLength(words, length) > 1)
+            {
+                equalLengthCount++;
+            }
+        }
+
+        return equalLengthCount;
+    }
+
+    static int CountWordsOfLength(string[] words, int length)
+    {
+        int count = 0;
+        foreach (string word in words)
+        {
+            if (word.Length == length)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
